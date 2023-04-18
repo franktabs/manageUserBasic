@@ -12,9 +12,9 @@ function AddUserForm() {
     return (
         <form >
             <label htmlFor="">Name</label>
-            <input type="text" name="name" value="" />
+            <input type="text" name="name" value="" onChange={handleInputChange} />
             <label htmlFor="">Username</label>
-            <input type="text" name="username" value="" />
+            <input type="text" name="username" value="" onChange={handleInputChange} />
             <button>Add new user</button>
         </form>
     );
