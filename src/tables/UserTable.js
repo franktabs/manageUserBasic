@@ -18,7 +18,7 @@ function UserTable(props) {
                                     <td> {user.name} </td>
                                     <td> {user.username} </td>
                                     <td>
-                                        <div className=" d-inline-block text-center "  >
+                                        <div className=" d-inline-block text-center " style={{ width: "max-content" }}  >
                                             <button className=" button muted-button" onClick={() => props.editRow(user)} >Modifier</button>
                                             {
                                                 !props.editing && <button className=" button btn mx-3 btn-danger" onClick={() => props.deleteUser(user.id)} >Supprimer</button>
@@ -36,7 +36,7 @@ function UserTable(props) {
                     }
                 </tbody>
             </table>
-        </div>
+        </div >
     );
 }
 

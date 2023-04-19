@@ -39,14 +39,14 @@ function App() {
 
 
   return (
-    <div>
+    <div className=" container">
       <h1 className=" text-center fw-bolder pt-5" >CRUD Application avec les Hooks</h1>
       <div className="flex-row p-5" >
         <div className="flex-large card p-4" >
           {
             editing ? (
               <div>
-                <h2>Modification de l'utilisateur</h2>
+                <h2 className=" text-center text-lg-start" >Modification de l'utilisateur</h2>
                 <EditUserForm
                   setEditing={setEditing}
                   currentUser={currentUser}
@@ -63,7 +63,7 @@ function App() {
 
         </div>
         <div className="flex-large card p-4 mx-lg-2">
-          <h2>Liste des utilisateurs</h2>
+          <h2 className=" text-center text-lg-start">Liste des utilisateurs</h2>
           <UserTable users={users} editRow={editRow} deleteUser={deleteUser} editing={editing} />
         </div>
       </div>
