@@ -63,7 +63,7 @@ function App() {
       </div>
       <div className="flex-large">
         <h2>Liste des utilisateurs</h2>
-        <UserTable users={users} editRow={editRow} deleteUser={deleteUser} />
+        <UserTable users={users} editRow={editRow} deleteUser={deleteUser} editing={editing} />
       </div>
     </div>
   </div>);

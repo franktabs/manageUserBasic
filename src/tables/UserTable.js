@@ -18,7 +18,10 @@ function UserTable(props) {
                                 <td> {user.username} </td>
                                 <td>
                                     <button className=" button muted-button" onClick={() => props.editRow(user)} >Modifier</button>
-                                    <button className=" button muted-button" onClick={() => props.deleteUser(user.id)} >Supprimer</button>
+                                    {
+                                        !props.editing && <button className=" button muted-button" onClick={() => props.deleteUser(user.id)} >Supprimer</button>
+                                    }
+
                                 </td>
                             </tr>
                         ))
