@@ -16,6 +16,9 @@ function App() {
     setUsers([...users, user]);
   }
 
+  const deleteUser = (id) => {
+    setUsers(users.filter((user) => user.id !== id));
+  }
 
 
   return (<div>
@@ -27,7 +30,7 @@ function App() {
       </div>
       <div className="flex-large">
         <h2>Liste des utilisateurs</h2>
-        <UserTable users={users} />
+        <UserTable users={users} deleteUser={deleteUser} />
       </div>
     </div>
   </div>);
