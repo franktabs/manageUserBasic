@@ -15,10 +15,10 @@ function UserTable(props) {
                         props.users.length > 0 ? (
                             props.users.map((user) => (
                                 <tr key={user.id} >
-                                    <td> {user.name} </td>
-                                    <td> {user.username} </td>
+                                    <td> <div>{user.name}</div> </td>
+                                    <td> <div>{user.username} </div></td>
                                     <td>
-                                        <div className=" d-inline-block text-center " style={{ width: "max-content" }}  >
+                                        <div className=" d-inline-block text-center " >
                                             <button className=" button muted-button" onClick={() => props.editRow(user)} >Modifier</button>
                                             {
                                                 !props.editing && <button className=" button btn mx-3 btn-danger" onClick={() => props.deleteUser(user.id)} >Supprimer</button>
