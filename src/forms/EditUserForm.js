@@ -21,8 +21,8 @@ function EditUserForm(props) {
             <input type="text" id="name" name="name" value={user.name} onChange={handleInputChange} />
             <label htmlFor="username">Username</label>
             <input type="text" name="username" id="username" value={user.username} onChange={handleInputChange} />
-            <button>Modifier</button>
-            <button onClick={() => props.setEditing(false)} className=" button muted-button" >Annuler</button>
+            <button className=" btn btn-primary" >Modifier</button>
+            <button onClick={() => props.setEditing(false)} className=" btn btn-light mx-3" >Annuler</button>
         </form>
     );
 }

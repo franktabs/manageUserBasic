@@ -40,9 +40,9 @@ function App() {
 
   return (
     <div>
-      <h1>CRUD Application avec les Hooks</h1>
-      <div className="flex-row" >
-        <div className="flex-large" >
+      <h1 className=" text-center fw-bolder pt-5" >CRUD Application avec les Hooks</h1>
+      <div className="flex-row p-5" >
+        <div className="flex-large card p-4" >
           {
             editing ? (
               <div>
@@ -62,7 +62,7 @@ function App() {
           }
 
         </div>
-        <div className="flex-large">
+        <div className="flex-large card p-4 m-lg-2">
           <h2>Liste des utilisateurs</h2>
           <UserTable users={users} editRow={editRow} deleteUser={deleteUser} editing={editing} />
         </div>
