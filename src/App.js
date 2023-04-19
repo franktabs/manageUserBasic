@@ -62,7 +62,7 @@ function App() {
           }
 
         </div>
-        <div className="flex-large card p-4 m-lg-2">
+        <div className="flex-large card p-4 mx-lg-2">
           <h2>Liste des utilisateurs</h2>
           <UserTable users={users} editRow={editRow} deleteUser={deleteUser} editing={editing} />
         </div>

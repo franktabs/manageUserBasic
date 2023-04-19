@@ -25,7 +25,7 @@ function AddUserForm(props) {
             <input type="text" name="name" id="name" value={user.name} onChange={handleInputChange} />
             <label htmlFor="username">Username</label>
             <input type="text" name="username" id="username" value={user.username} onChange={handleInputChange} />
-            <button className=" btn btn-primary" >Add new user</button>
+            <button className=" btn btn-primary mt-3" >Add new user</button>
         </form>
     );
 }
