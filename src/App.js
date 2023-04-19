@@ -38,35 +38,36 @@ function App() {
   }
 
 
-  return (<div>
-    <h1>CRUD Application avec les Hooks</h1>
-    <div className="flex-row" >
-      <div className="flex-large" >
-        {
-          editing ? (
-            <div>
-              <h2>Modification de l'utilisateur</h2>
-              <EditUserForm
-                setEditing={setEditing}
-                currentUser={currentUser}
-                updateUser={updateUser}
-              />
-            </div>
-          ) : (
-            <div>
-              <h2>Nouvel utilisateur</h2>
-              <AddUserForm addUser={addUser} />
-            </div>
-          )
-        }
+  return (
+    <div>
+      <h1>CRUD Application avec les Hooks</h1>
+      <div className="flex-row" >
+        <div className="flex-large" >
+          {
+            editing ? (
+              <div>
+                <h2>Modification de l'utilisateur</h2>
+                <EditUserForm
+                  setEditing={setEditing}
+                  currentUser={currentUser}
+                  updateUser={updateUser}
+                />
+              </div>
+            ) : (
+              <div>
+                <h2>Nouvel utilisateur</h2>
+                <AddUserForm addUser={addUser} />
+              </div>
+            )
+          }
 
+        </div>
+        <div className="flex-large">
+          <h2>Liste des utilisateurs</h2>
+          <UserTable users={users} editRow={editRow} deleteUser={deleteUser} editing={editing} />
+        </div>
       </div>
-      <div className="flex-large">
-        <h2>Liste des utilisateurs</h2>
-        <UserTable users={users} editRow={editRow} deleteUser={deleteUser} editing={editing} />
-      </div>
-    </div>
-  </div>);
+    </div>);
 }
 
 export default App;
